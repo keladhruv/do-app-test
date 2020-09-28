@@ -1,0 +1,390 @@
+{
+   "name": "microblog",
+   "x-repo": {
+      "github": {
+         "repo": "kamaln7/app-platform-microblog",
+         "branch": "main",
+         "deploy_on_push": true
+      }
+   },
+   "x-envs": {
+      "envs": [
+         {
+            "key": "APP_KEY",
+            "value": null,
+            "type": "SECRET"
+         },
+         {
+            "key": "APP_ENV",
+            "value": "production"
+         },
+         {
+            "key": "APP_URL",
+            "value": "${PUBLIC_URL}"
+         },
+         {
+            "key": "LOG_CHANNEL",
+            "value": "stderr"
+         },
+         {
+            "key": "CACHE_DRIVER",
+            "value": "redis"
+         },
+         {
+            "key": "QUEUE_CONNECTION",
+            "value": "redis"
+         },
+         {
+            "key": "SESSION_DRIVER",
+            "value": "redis"
+         },
+         {
+            "key": "REDIS_URL",
+            "value": "${redis.REDIS_URL}"
+         },
+         {
+            "key": "DATABASE_URL",
+            "value": "${db.DATABASE_URL}"
+         },
+         {
+            "key": "DB_CONNECTION",
+            "value": "mysql"
+         },
+         {
+            "key": "FILESYSTEM_DRIVER",
+            "value": "spaces"
+         },
+         {
+            "key": "FILESYSTEM_CLOUD",
+            "value": "spaces"
+         },
+         {
+            "key": "SPACES_ACCESS_KEY",
+            "value": null,
+            "type": "SECRET"
+         },
+         {
+            "key": "SPACES_SECRET_KEY",
+            "value": null,
+            "type": "SECRET"
+         },
+         {
+            "key": "SPACES_REGION",
+            "value": "ams3"
+         },
+         {
+            "key": "SPACES_SPACE",
+            "value": null
+         },
+         {
+            "key": "SPACES_URL",
+            "value": "https://##TODO##.ams3.cdn.digitaloceanspaces.com"
+         },
+         {
+            "key": "HORIZON_KEY",
+            "value": "sammyshark",
+            "type": "SECRET"
+         },
+         {
+            "key": "FORCE_HTTPS",
+            "value": "true"
+         }
+      ]
+   },
+   "services": [
+      {
+         "name": "web",
+         "build_command": "npm run production",
+         "run_command": "heroku-php-apache2 public/",
+         "github": {
+            "repo": "kamaln7/app-platform-microblog",
+            "branch": "main",
+            "deploy_on_push": true
+         },
+         "envs": [
+            {
+               "key": "APP_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "APP_ENV",
+               "value": "production"
+            },
+            {
+               "key": "APP_URL",
+               "value": "${PUBLIC_URL}"
+            },
+            {
+               "key": "LOG_CHANNEL",
+               "value": "stderr"
+            },
+            {
+               "key": "CACHE_DRIVER",
+               "value": "redis"
+            },
+            {
+               "key": "QUEUE_CONNECTION",
+               "value": "redis"
+            },
+            {
+               "key": "SESSION_DRIVER",
+               "value": "redis"
+            },
+            {
+               "key": "REDIS_URL",
+               "value": "${redis.REDIS_URL}"
+            },
+            {
+               "key": "DATABASE_URL",
+               "value": "${db.DATABASE_URL}"
+            },
+            {
+               "key": "DB_CONNECTION",
+               "value": "mysql"
+            },
+            {
+               "key": "FILESYSTEM_DRIVER",
+               "value": "spaces"
+            },
+            {
+               "key": "FILESYSTEM_CLOUD",
+               "value": "spaces"
+            },
+            {
+               "key": "SPACES_ACCESS_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "SPACES_SECRET_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "SPACES_REGION",
+               "value": "ams3"
+            },
+            {
+               "key": "SPACES_SPACE",
+               "value": null
+            },
+            {
+               "key": "SPACES_URL",
+               "value": "https://##TODO##.ams3.cdn.digitaloceanspaces.com"
+            },
+            {
+               "key": "HORIZON_KEY",
+               "value": "sammyshark",
+               "type": "SECRET"
+            },
+            {
+               "key": "FORCE_HTTPS",
+               "value": "true"
+            }
+         ]
+      }
+   ],
+   "workers": [
+      {
+         "name": "horizon",
+         "run_command": "php artisan horizon",
+         "github": {
+            "repo": "kamaln7/app-platform-microblog",
+            "branch": "main",
+            "deploy_on_push": true
+         },
+         "envs": [
+            {
+               "key": "APP_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "APP_ENV",
+               "value": "production"
+            },
+            {
+               "key": "APP_URL",
+               "value": "${PUBLIC_URL}"
+            },
+            {
+               "key": "LOG_CHANNEL",
+               "value": "stderr"
+            },
+            {
+               "key": "CACHE_DRIVER",
+               "value": "redis"
+            },
+            {
+               "key": "QUEUE_CONNECTION",
+               "value": "redis"
+            },
+            {
+               "key": "SESSION_DRIVER",
+               "value": "redis"
+            },
+            {
+               "key": "REDIS_URL",
+               "value": "${redis.REDIS_URL}"
+            },
+            {
+               "key": "DATABASE_URL",
+               "value": "${db.DATABASE_URL}"
+            },
+            {
+               "key": "DB_CONNECTION",
+               "value": "mysql"
+            },
+            {
+               "key": "FILESYSTEM_DRIVER",
+               "value": "spaces"
+            },
+            {
+               "key": "FILESYSTEM_CLOUD",
+               "value": "spaces"
+            },
+            {
+               "key": "SPACES_ACCESS_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "SPACES_SECRET_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "SPACES_REGION",
+               "value": "ams3"
+            },
+            {
+               "key": "SPACES_SPACE",
+               "value": null
+            },
+            {
+               "key": "SPACES_URL",
+               "value": "https://##TODO##.ams3.cdn.digitaloceanspaces.com"
+            },
+            {
+               "key": "HORIZON_KEY",
+               "value": "sammyshark",
+               "type": "SECRET"
+            },
+            {
+               "key": "FORCE_HTTPS",
+               "value": "true"
+            }
+         ]
+      },
+      {
+         "name": "scheduler",
+         "run_command": "while true; do\n  echo \"=> Running scheduler\"\n  php artisan schedule:run || true;\n  echo \"=> Sleeping for 60 seconds\"\n  sleep 60;\ndone\n",
+         "github": {
+            "repo": "kamaln7/app-platform-microblog",
+            "branch": "main",
+            "deploy_on_push": true
+         },
+         "envs": [
+            {
+               "key": "APP_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "APP_ENV",
+               "value": "production"
+            },
+            {
+               "key": "APP_URL",
+               "value": "${PUBLIC_URL}"
+            },
+            {
+               "key": "LOG_CHANNEL",
+               "value": "stderr"
+            },
+            {
+               "key": "CACHE_DRIVER",
+               "value": "redis"
+            },
+            {
+               "key": "QUEUE_CONNECTION",
+               "value": "redis"
+            },
+            {
+               "key": "SESSION_DRIVER",
+               "value": "redis"
+            },
+            {
+               "key": "REDIS_URL",
+               "value": "${redis.REDIS_URL}"
+            },
+            {
+               "key": "DATABASE_URL",
+               "value": "${db.DATABASE_URL}"
+            },
+            {
+               "key": "DB_CONNECTION",
+               "value": "mysql"
+            },
+            {
+               "key": "FILESYSTEM_DRIVER",
+               "value": "spaces"
+            },
+            {
+               "key": "FILESYSTEM_CLOUD",
+               "value": "spaces"
+            },
+            {
+               "key": "SPACES_ACCESS_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "SPACES_SECRET_KEY",
+               "value": null,
+               "type": "SECRET"
+            },
+            {
+               "key": "SPACES_REGION",
+               "value": "ams3"
+            },
+            {
+               "key": "SPACES_SPACE",
+               "value": null
+            },
+            {
+               "key": "SPACES_URL",
+               "value": "https://##TODO##.ams3.cdn.digitaloceanspaces.com"
+            },
+            {
+               "key": "HORIZON_KEY",
+               "value": "sammyshark",
+               "type": "SECRET"
+            },
+            {
+               "key": "FORCE_HTTPS",
+               "value": "true"
+            }
+         ]
+      }
+   ],
+   "databases": [
+      {
+         "name": "db",
+         "engine": "MYSQL",
+         "version": "8",
+         "production": true,
+         "cluster_name": "laravel-k8s-tutorial-test",
+         "db_name": "laravel",
+         "db_user": "laravel"
+      },
+      {
+         "name": "redis",
+         "engine": "REDIS",
+         "production": true,
+         "version": "5",
+         "cluster_name": "laravel-k8s-tutorial-test-redis"
+      }
+   ]
+}
