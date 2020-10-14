@@ -14,5 +14,6 @@ services:
     branch: master
   http_port: 7379
   name: webdis
+  repoCloneUrl: https://github.com/nicolasff/webdis.git
   routes:
   - path: "/"
