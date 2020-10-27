@@ -1,4 +1,5 @@
 --- 
+name: "webdis-application"
 services: 
   - 
     dockerfilePath: Dockerfile
