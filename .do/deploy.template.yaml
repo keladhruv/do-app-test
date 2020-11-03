@@ -1,0 +1,16 @@
+spec:
+  name: sample-golang
+  services:
+  - name: web
+    git:
+      branch: main
+      repo_clone_url: https://github.com/digitalocean/sample-golang.git
+    envs: 
+    - key: REDIS_LINK
+      type: SECRET
+      value: "TEST VALUE"
+    - key: REDIS_LINK
+      type: SECRET
+    - key: REDIS_LINK
+      type: SECRET
+      value: ""
