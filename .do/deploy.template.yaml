@@ -4,7 +4,7 @@ spec:
   - name: web
     git:
       branch: main
-      repo_clone_url: https://github.com/digitalocean/sample-golang.git
+      repo_clone_url: https://github.com/keladhruv/do-app-test.git
     envs: 
     - key: REDIS_LINK
       type: SECRET
